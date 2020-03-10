@@ -27,7 +27,7 @@ def immutableFunction():
 	origList = ("one","two","three")
 	addList = ("one","two","five","six")
 	delList = ("two","five")
-	print("Before any modifications",origList)
+	print("Origional list",origList)
 	#Add list to Origional
 	modifiedList = origList + addList
 	dupFreeList = ("temp",)
@@ -39,7 +39,7 @@ def immutableFunction():
 			tupleIndex = (index,)
 			dupFreeList+= tupleIndex
 	dupFreeList = dupFreeList[1:]
-	print("Removed Duplicates", dupFreeList)
+	print("Removed duplicates", dupFreeList)
 
 	# Remove delete list elements
 	finalList = ("temp",)
@@ -48,20 +48,19 @@ def immutableFunction():
 			tupleIndex = (index,)
 			finalList+= tupleIndex
 	finalList= finalList[1:]
-	print("Remove Deletion List",finalList)
+	print("Remove deletion list",finalList)
 	
 	# Sort the final list
 	if len(finalList) <= 0:
-		print("Final List is Empty")
+		print("Final list is empty")
 		return
 	elif len(finalList) == 1:
 		print("List equals one")
 		return(finalList)
 	# List must be sorted use bubble sort
 	else:
-		print("Sort List")
+		print("Sorting list")
 		finalSortedList = bubbleSortRevAlphabetical(finalList)
-		print(finalSortedList)
 		return finalSortedList
 
 

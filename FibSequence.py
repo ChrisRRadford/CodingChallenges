@@ -6,12 +6,13 @@ def fibonacci(value):
 		return 0
 	elif(value == 1 or value == 2):
 		return 1
+	#begin recursion
 	else:
 		return(fibonacci(value-1)+fibonacci(value-2))
 
 
 def main():
-	for i in range(0,14):
+	for i in range(0,24):
 		print(fibonacci(i))
 
 main()
